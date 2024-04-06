@@ -1,10 +1,15 @@
 * {
   font-family: "Roboto";
+  box-sizing: content-box;
 }
 
 svg {
   max-width: 20px;
   width: 1rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -15,21 +20,40 @@ body {
 header {
   position: relative;
   width: 80%;
+  /* max-width: 80%; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin: 0 auto;
 }
 
-/* .blue {
+/* .triangle {
   position: absolute;
-  height: 1000px;
-  width: 1000px;
-  left: -400px;
-  top: -450px;
-  z-index: -1;
-  background-color: #0891b2;
-  transform: rotate(60deg);
+  width: 0;
+  height: 0;
+  border-top: 600px solid red;
+  border-right: 800px solid transparent;
+  overflow: hidden;
+  max-width: 100%;
+} */
+
+/* .triangle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.triangle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 400px solid #0891b2;
+  border-right: 550px solid transparent;
 } */
 
 .profile-pic-container {
@@ -37,10 +61,11 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin: 0 auto;
 }
 
 .profile-pic-container > img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .profile-pic-container > h1 {
@@ -61,7 +86,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
   gap: 5rem;
   width: 80%;
   max-width: 80%;
@@ -76,18 +101,33 @@ header {
 }
 
 .container {
-  /* max-width: 80%; */
+  max-width: 80%;
 }
 
 .project-screenshot {
-  max-width: 100%;
-  height: 300px;
+  /* max-width: 100%; */
+  /* height: 50%; */
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  /* height: 250px; */
   background-color: orange;
+}
+
+.project-screenshot > img {
+  /* display: block; */
+  height: auto;
+  width: 100%;
+  /* max-width: 100%; */
+  object-fit: cover;
+  margin: auto;
 }
 
 .project-description {
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 250px;
 }
 
 .project-title {
@@ -125,11 +165,13 @@ footer > :last-child {
   .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
     /* align-items: center; */
     /* padding: 3rem; */
     gap: 5rem;
     width: 80%;
     max-width: 80%;
+    height: 100%;
     /* margin: 0 auto; */
   }
 }
