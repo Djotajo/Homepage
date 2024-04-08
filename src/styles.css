@@ -64,6 +64,10 @@ header {
   max-width: 400px;
 }
 
+.profile-description-container > :last-child {
+  font-size: 1.5rem;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -115,6 +119,7 @@ header {
 .project-title {
   display: flex;
   justify-content: space-around;
+  font-size: 1rem;
 }
 
 .project-links {
@@ -132,17 +137,25 @@ footer {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  padding: 3rem;
+
   background-color: #0891b2;
   color: white;
 }
 
-footer img,
+footer > div img,
 footer .devicon-github-original {
   /* max-height: 1rem; */
   font-size: 2rem;
   width: 2rem;
   height: auto;
+}
+
+footer > div {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 footer > h2 {
@@ -158,6 +171,10 @@ footer > :last-child {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+footer > img {
+  width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -221,6 +238,21 @@ footer > :last-child {
     gap: 4rem;
     height: 100%;
     border: 1px solid purple;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  footer > div {
+    gap: 1rem;
+  }
+
+  footer > img {
+    display: block;
+    width: 50%;
+    padding: 3rem;
   }
 }
 
