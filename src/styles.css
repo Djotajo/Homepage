@@ -110,8 +110,12 @@ header {
   margin: auto;
 }
 
+.project-screenshot > img:hover {
+  transform: scale(1.05);
+}
+
 .project-description {
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /* height: 250px; */
 }
@@ -130,7 +134,7 @@ header {
 }
 
 .project-description > p {
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 footer {
@@ -341,3 +345,6 @@ footer > img {
   border-right: 550px solid transparent;
   background-color: #0891b2;
 } */
+
+/* Photo by <a href="https://unsplash.com/@richtervet?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rich Tervet</a> on <a href="https://unsplash.com/photos/gray-laptop-computer-turned-on-q2GNdFmhxx4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+   */
