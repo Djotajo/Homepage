@@ -14,8 +14,16 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(jpg|png|gif|svg)$/i,
-        type: "asset/resource",
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+        type: "javascript/auto",
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
