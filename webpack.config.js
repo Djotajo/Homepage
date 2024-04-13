@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         test: /\.(jpg|png)$/,
-        type: "asset/resource",
+        type: "asset/inline",
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
